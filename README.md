@@ -84,3 +84,11 @@ Training the Siamese Network.
 
 ## Output
 ![Output](/assets/tl.png)
+
+
+
+## References to study in detail about related topics
+* [Siamese Networks](https://towardsdatascience.com/one-shot-learning-with-siamese-networks-using-keras-17f34e75bb3d)
+* [Triplet Loss](https://medium.com/@enoshshr/triplet-loss-and-siamese-neural-networks-5d363fdeba9b)
+* [Advanced Code](https://github.com/omoindrot/tensorflow-triplet-loss)
+* [Deep Learning](https://www.datacamp.com/community/tutorials/deep-learning-python)
