@@ -40,53 +40,8 @@ The three instances of the `EmbeddingModel` shown above are not different instan
 If you need a deeper insight, refer to the articles in the reference section to read more.
 
 ### Triplet Loss
-# Task 7: Triplet Loss
-
 A loss function that tries to pull the Embeddings of Anchor and Positive Examples closer, and tries to push the Embeddings of Anchor and Negative Examples away from each other.
-
-Root mean square difference between Anchor and Positive examples in a batch of N images is:
-$
-\begin{equation}
-d_p = \sqrt{\frac{\sum_{i=0}^{N-1}(f(a_i) - f(p_i))^2}{N}}
-\end{equation}
-$
-
-Root mean square difference between Anchor and Negative examples in a batch of N images is:
-$
-\begin{equation}
-d_n = \sqrt{\frac{\sum_{i=0}^{N-1}(f(a_i) - f(n_i))^2}{N}}
-\end{equation}
-$
-
-For each example, we want:
-$
-\begin{equation}
-d_p \leq d_n
-\end{equation}
-$
-
-Therefore,
-$
-\begin{equation}
-d_p - d_n \leq 0
-\end{equation}
-$
-
-This condition is quite easily satisfied during the training.
-
-We will make it non-trivial by adding a margin (alpha):
-$
-\begin{equation}
-d_p - d_n + \alpha \leq 0
-\end{equation}
-$
-
-Given the condition above, the Triplet Loss L is defined as:
-$
-\begin{equation}
-L = max(d_p - d_n + \alpha, 0)
-\end{equation}
-$
+It is explained with equations in the notebook
 
 ![Triplet loss on two positive faces (Obama) and one negative face (Macron](/img/tripletLoss.png)
 
@@ -109,20 +64,20 @@ Follow the steps in the notebook if you want to train your own or you can simply
 
 ## Project Structure
 
-### Step 1: Libraries
+### Libraries
 Importing the Libraries and Helper Functions.
-### Step 2: Data
+### Data
 Importing the Data (MNIST Dataset)
 Reshaping and Normalizing the Examples.
-### Step 3: FUnction
+### Functions
 Creating a function to plot triplets and generate triplet examples.
-### Step 4: Embedding Model
+### Embedding Model
 Creating an Embedding Model, this is a simple Neural Network.
-### Step 5: Siamese Network
+### Siamese Network
 Using the Embedding Model to create a Siamese Network.
-### Step 6: Triplet Loss
+### Triplet Loss
 Implementing the Triplet Loss function and the custom loss function.
-### Step 7: Model Training
+### Model Training
 Creating a small test set.
 Compiling the Siamese Network with Triplet Loss.
 Training the Siamese Network.
