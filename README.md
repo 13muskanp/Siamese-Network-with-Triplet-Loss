@@ -43,7 +43,7 @@ If you need a deeper insight, refer to the articles in the reference section to 
 A loss function that tries to pull the Embeddings of Anchor and Positive Examples closer, and tries to push the Embeddings of Anchor and Negative Examples away from each other.
 It is explained with equations in the notebook
 
-![Triplet loss on two positive faces (Obama) and one negative face (Macron](/img/tripletLoss.png)
+![Triplet loss on two positive faces (Obama) and one negative face (Macron](/assets/tl.png)
 
 
 ## Installing
@@ -83,7 +83,7 @@ Compiling the Siamese Network with Triplet Loss.
 Training the Siamese Network.
 
 ## Output
-![Output](/assets/tl.png)
+![Output](/assets/output.png)
 
 
 
